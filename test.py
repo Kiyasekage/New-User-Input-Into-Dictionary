@@ -15,8 +15,13 @@ programming_language = [
      "experience" : 2
     },
 ]
-
 print("Welcome to the Programmer Login Page\nPlease fill your identity below")
+status = input("What's your current position?[A : Admin, C : Client]")
+if status = "A":
+    password_admin = "admin123456"
+    password = input("Password : ")
+    if password != password_admin:
+        print("Password Incorrect!")
 u_n = input("Username : ")
 f_l = input("Favorite_Languange(s) : ")
 e = int(input("Years(only enter number) : "))
