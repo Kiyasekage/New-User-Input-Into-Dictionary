@@ -21,9 +21,16 @@ print("Welcome to the Programmer Login Page\nPlease fill your identity below")
 status = input("What's your current position?[A : Admin, C : Client]").upper().strip()
 if status == "A":
     password_admin = "admin123456"
-    password = input("Password : ")
-    if password != password_admin:
-        print("Password Incorrect!")
+    chance = 3
+    while chance>0:
+        password = input("Password : ")
+        if password != password_admin:
+            print("Password Incorrect!")
+            chance-=1
+            if chance==0:
+                print("Unauthorized Personal detected.. Please exit immediately")
+        elif password == password_admin:
+            print("Success Login!")
 if status == "C":
     ans = "YES"
     while ans == "YES":
