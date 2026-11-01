@@ -4,7 +4,7 @@ def add_user(i_user_name,i_favorite_languange,i_experience):
     user["favorite_languanges"] = i_favorite_languange
     user["experience"] = i_experience
     programming_language.append(user)
-    print(programming_language)
+    print("Updated Version : ",programming_language)
 programming_language = [
     {"user_name" : "Elshad",
      "favorite_languages" : ["Python", "Java", "C#"],
@@ -15,14 +15,15 @@ programming_language = [
      "experience" : 2
     },
 ]
+
 print("Welcome to the Programmer Login Page\nPlease fill your identity below")
-status = input("What's your current position?[A : Admin, C : Client]")
+status = input("What's your current position?[A : Admin, C : Client]").upper().strip()
 if status == "A":
     password_admin = "admin123456"
     password = input("Password : ")
     if password != password_admin:
         print("Password Incorrect!")
-elif status == "C":
+if status == "C":
     ans = "YES"
     while ans == "YES":
         print("Please fill your identity below")
@@ -30,4 +31,4 @@ elif status == "C":
         f_l = input("Favorite_Languange(s) : ")
         e = int(input("Years(only enter number) : "))
         add_user(u_n,f_l,e)
-        ans = input("Do you want to continue a new user?[Yes/No]")
+        ans = input("Do you want to continue a new user?[Yes/No]").upper().strip()
