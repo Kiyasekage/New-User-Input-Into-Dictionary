@@ -15,3 +15,10 @@ programming_language = [
      "experience" : 2
     },
 ]
+
+
+print("Welcome to the Programmer Login Page\nPlease fill your identity below")
+u_n = input("Username : ")
+f_l = input("Favorite_Languange(s) : ")
+e = int(input("Years(only enter number) : "))
+add_user(u_n,f_l,e)
